@@ -1,6 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  // fra1 (Frankfurt) = lowest RTT to Iranian upstreams (Tgju/BrsApi/Nobitex)
-  // and fine for CoinGecko/ECB. Hobby plan supports region selection.
   "regions": ["fra1"]
 }
