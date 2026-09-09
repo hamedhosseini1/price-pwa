@@ -19,7 +19,9 @@ const CODES = CATALOG.filter((c) => c.src.frankfurter).map((c) => c.src.frankfur
 export async function fetchFrankfurter(): Promise<SourceDump> {
   const started = Date.now();
   const url = `https://api.frankfurter.dev/v1/latest?base=USD&symbols=${CODES.join(",")}`;
-  const res = await fetchJson<FrankDoc>(url, { timeoutMs: 15000 });
+  // short timeout: ECB is only a stabilizing cross-check; never let it
+  // dominate the refresh budget (Vercel Hobby functions timeout at ~10s).
+  const res = await fetchJson<FrankDoc>(url, { timeoutMs: 8000 });
   const ms = Date.now() - started;
   if (!res.ok || !res.data?.rates) return { source: "frankfurter", quotes: {}, ms, error: res.error };
   const now = Date.now();

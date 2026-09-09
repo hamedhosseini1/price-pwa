@@ -5,12 +5,13 @@
   "description": "Persian RTL live-price PWA: currencies, gold & coins, crypto, oil",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run ext-zip && next build",
     "start": "next start",
     "test": "vitest run",
     "smoke": "node scripts/smoke.mjs",
     "icons": "node scripts/generate-icons.mjs",
-    "assets": "node scripts/fetch-assets.mjs"
+    "assets": "node scripts/fetch-assets.mjs",
+    "ext-zip": "node scripts/pack-extension.mjs"
   },
   "dependencies": {
     "next": "^15.3.4",

@@ -48,6 +48,7 @@ export function Header() {
         <nav className="nav-links">
           <Link href="/" className={path === "/" ? "active" : ""}>خانه</Link>
           <Link href="/converter" className={path === "/converter" ? "active" : ""}>مبدل و مقایسه</Link>
+          <Link href="/extension" className={path === "/extension" ? "active" : ""}>اکستنشن</Link>
         </nav>
         <span className="header-spacer" />
         <div className="seg" role="group" aria-label="واحد نمایش">

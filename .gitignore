@@ -3,6 +3,7 @@ node_modules/
 out/
 dist/
 data/history.json
+public/extension.zip
 .env
 .env.local
 *.log

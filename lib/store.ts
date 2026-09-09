@@ -99,6 +99,10 @@ async function loadHistory(): Promise<void> {
 }
 
 function scheduleSave(): void {
+  // NOTE: on serverless (Vercel) the filesystem is ephemeral/read-only —
+  // persistence silently no-ops and history is rebuilt from upstreams.
+  // This is safe: crypto via CoinGecko, others via Tgju archive.
+  if (process.env.VERCEL) return;
   if (store.saveTimer) return;
   store.saveTimer = setTimeout(async () => {
     store.saveTimer = null;
@@ -186,9 +190,13 @@ export async function getSnapshot(): Promise<{ snap: Snapshot | null; stale: boo
       });
     }
     if (!store.snapshot) {
+      // First load ever: wait for upstream, but cap the wait below the
+      // serverless timeout (Vercel Hobby ≈10s) so we return 503+retry
+      // instead of a hard 504. The client retries on the next poll.
+      const firstLoadCap = process.env.VERCEL ? 9000 : 25_000;
       await Promise.race([
         store.refreshing,
-        new Promise((r) => setTimeout(r, 25_000)),
+        new Promise((r) => setTimeout(r, firstLoadCap)),
       ]);
       return { snap: store.snapshot, stale: false };
     }
