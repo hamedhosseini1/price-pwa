@@ -1,0 +1,38 @@
+:root {
+  --bg: #ffffff; --tx: #0f1f33; --mut: #5b6b82; --bd: #e3e9f2;
+  --acc: #0e7c7b; --grn: #0d9d6c; --red: #e5484d;
+  --grnbg: rgba(13,157,108,.12); --redbg: rgba(229,72,77,.12);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111a2e; --tx: #e8eef7; --mut: #93a1b8; --bd: #22304d; --acc: #2dd4bf; }
+}
+* { box-sizing: border-box; }
+body {
+  width: 330px; margin: 0; padding: 10px 12px 8px;
+  font-family: Vazirmatn, Tahoma, sans-serif; font-size: 13px;
+  background: var(--bg); color: var(--tx);
+}
+header, footer { display: flex; align-items: center; gap: 8px; }
+header { margin-bottom: 8px; font-size: 14px; }
+footer { margin-top: 8px; font-size: 11px; color: var(--mut); }
+.sp { flex: 1; }
+a { color: var(--acc); text-decoration: none; font-weight: 700; }
+.seg { display: inline-flex; background: var(--bd); border-radius: 999px; padding: 2px; gap: 2px; }
+.seg button { border: 0; background: transparent; color: var(--mut); border-radius: 999px; padding: 3px 12px; font-family: inherit; font-size: 12px; cursor: pointer; }
+.seg button.active { background: var(--bg); color: var(--tx); font-weight: 700; }
+.row { display: flex; align-items: center; gap: 10px; padding: 8px 2px; border-top: 1px solid var(--bd); }
+.row:first-child { border-top: 0; }
+.row img { width: 28px; height: 28px; border-radius: 8px; object-fit: cover; background: var(--bd); }
+.badge { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; font-weight: 800; font-size: 12px; background: rgba(14,124,123,.12); color: var(--acc); flex: none; }
+.nm { flex: 1; min-width: 0; }
+.nm b { display: block; font-size: 13px; }
+.nm small { color: var(--mut); font-size: 10px; }
+.pr { text-align: left; font-variant-numeric: tabular-nums; }
+.pr b { display: block; font-size: 14px; }
+.pr small { color: var(--mut); font-size: 10px; }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+.pill.up { background: var(--grnbg); color: var(--grn); }
+.pill.down { background: var(--redbg); color: var(--red); }
+.pill.flat { background: var(--bd); color: var(--mut); }
+.loading, .error { text-align: center; color: var(--mut); padding: 24px 8px; }
+.error b { display: block; color: var(--red); margin-bottom: 4px; }

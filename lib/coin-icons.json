@@ -1,0 +1,21 @@
+{
+  "BTC": "/coins/bitcoin.png",
+  "ETH": "/coins/ethereum.png",
+  "USDT": "/coins/tether.png",
+  "BNB": "/coins/binancecoin.png",
+  "XRP": "/coins/ripple.png",
+  "USDC": "/coins/usd-coin.png",
+  "SOL": "/coins/solana.png",
+  "TRX": "/coins/tron.png",
+  "DOGE": "/coins/dogecoin.png",
+  "LINK": "/coins/chainlink.png",
+  "ADA": "/coins/cardano.png",
+  "XLM": "/coins/stellar.png",
+  "LTC": "/coins/litecoin.png",
+  "UNI": "/coins/uniswap.png",
+  "AVAX": "/coins/avalanche-2.png",
+  "SHIB": "/coins/shiba-inu.png",
+  "DOT": "/coins/polkadot.png",
+  "ATOM": "/coins/cosmos.png",
+  "FIL": "/coins/filecoin.png"
+}

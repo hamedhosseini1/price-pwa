@@ -1,0 +1,31 @@
+{
+  "name": "price-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Persian RTL live-price PWA: currencies, gold & coins, crypto, oil",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "smoke": "node scripts/smoke.mjs",
+    "icons": "node scripts/generate-icons.mjs",
+    "assets": "node scripts/fetch-assets.mjs"
+  },
+  "dependencies": {
+    "next": "^15.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "playwright-core": "^1.63.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
