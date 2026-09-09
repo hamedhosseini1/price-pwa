@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
   badgeText, fmtPrice, fmtPct, groupThousands, pickItems, usdToman,
-  artUrl, flagImg,
+  artUrl, flagImg, DEFAULT_BASE,
 } from "../extension/lib.js";
 
 describe("extension lib", () => {
@@ -38,6 +38,7 @@ describe("extension lib", () => {
     expect(usdToman({ items: [] })).toBeNull();
   });
   it("resolves artwork against the app server", () => {
+    expect(DEFAULT_BASE).toBe("https://price-pwa.vercel.app");
     expect(artUrl("/coins/bitcoin.png", "http://localhost:3000")).toBe(
       "http://localhost:3000/coins/bitcoin.png",
     );

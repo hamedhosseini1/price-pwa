@@ -3,7 +3,7 @@
  * Pure functions only — safe to import in Node/vitest (no top-level chrome use).
  */
 
-export const DEFAULT_BASE = "http://localhost:3000";
+export const DEFAULT_BASE = "https://price-pwa.vercel.app";
 export const DEFAULT_IDS = ["USD", "EUR", "GOLD18", "COIN_EMAMI", "BTC", "XAU", "BRENT"];
 
 /** catalogId → flag ISO (mirrors lib/catalog.ts FLAGS; served by the app). */

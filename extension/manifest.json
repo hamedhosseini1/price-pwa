@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "قیمت لحظه‌ای ارز، طلا و کریپتو",
   "short_name": "قیمت لحظه‌ای",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "نمایش لحظه‌ای قیمت دلار، طلا، سکه و بیت‌کوین + بج قیمت دلار روی آیکون",
   "default_locale": "fa",
   "icons": {
@@ -26,6 +26,10 @@
     "type": "module"
   },
   "permissions": ["alarms", "storage"],
-  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*"],
+  "host_permissions": [
+    "https://price-pwa.vercel.app/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
   "options_page": "options.html"
 }

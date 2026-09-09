@@ -63,8 +63,9 @@ export default function ExtensionPage() {
             </div>
           ))}
           <div className="alert-banner">
-            پیش‌نیاز: سرور اپ باید روشن باشد (روی همین دستگاه: <code dir="ltr">npm run dev</code>).
-            آدرس سرور را می‌توانید بعداً در صفحه Options خود اکستنشن عوض کنید.
+            بدون هیچ تنظیمی به نسخه آنلاین وصل است. اگر نسخه لوکال خودتان را
+            اجرا می‌کنید (<code dir="ltr">npm run dev</code>)، آدرس را در صفحه
+            Options خود اکستنشن عوض کنید.
           </div>
         </div>
 
