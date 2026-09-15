@@ -11,7 +11,8 @@
     "smoke": "node scripts/smoke.mjs",
     "icons": "node scripts/generate-icons.mjs",
     "assets": "node scripts/fetch-assets.mjs",
-    "ext-zip": "node scripts/pack-extension.mjs"
+    "ext-zip": "node scripts/pack-extension.mjs",
+    "telegram-setup": "node scripts/telegram-setup.mjs"
   },
   "dependencies": {
     "next": "^15.3.4",
