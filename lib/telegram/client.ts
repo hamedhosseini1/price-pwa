@@ -9,7 +9,13 @@ export function btn(text: string, data: string) {
 }
 
 export class TgClient {
-  constructor(private token: string, private base = "https://api.telegram.org") {}
+  private token: string;
+  private base: string;
+
+  constructor(token: string, base = "https://api.telegram.org") {
+    this.token = token;
+    this.base = base;
+  }
 
   private async call<T>(method: string, payload: Record<string, unknown>): Promise<T> {
     const res = await fetch(`${this.base}/bot${this.token}/${method}`, {
